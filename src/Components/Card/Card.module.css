@@ -1,0 +1,80 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 18rem 4rem 2rem;
+    justify-items: center;
+    padding: 0.5rem;
+    width: 19rem;
+    height: 26rem;
+    border: 1px solid rgb(154, 150, 150);
+    border-radius: 1rem;
+    background-color: #F5F5F5;
+    gap: 1rem;
+}
+
+.image {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.breeds {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    padding-left: 1rem;
+
+}
+
+.breeds::after {
+    content: ' ...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 1rem;
+    background-color: #F5F5F5;
+}
+
+.heartCheckbox {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: none;
+}
+
+.heartLabel {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: grey;
+    transition: color 0.3s;
+}
+
+.heartCheckbox:checked + .heartLabel {
+    color: red;
+}
+
+.removeBtn {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.trash {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
